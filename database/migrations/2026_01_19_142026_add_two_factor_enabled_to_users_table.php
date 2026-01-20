@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean('two_factor_enabled')->default(false);
+            $table->boolean('two_factor_enabled')->default(true);
         });
     }
 
