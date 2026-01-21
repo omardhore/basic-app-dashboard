@@ -5,7 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect()->route('login');
+    return view('home.index');
 });
 
 Route::get('/dashboard', [AdminController::class, 'index'])->middleware(['auth', 'twofactor', 'verified'])->name('dashboard');

@@ -43,13 +43,13 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        Auth::login($user);
+        // Auth::login($user);
 
-        if ($user->two_factor_enabled) {
-            $user->generateTwoFactorCode();
-            \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\TwoFactorCode($user->two_factor_code));
-        }
+        $notification = array(
+            'message' => 'Registration Successful! Please Login.',
+            'alert-type' => 'success'
+        );
 
-        return redirect(route('dashboard', absolute: false));
+        return redirect()->route('login')->with($notification);
     }
 }
