@@ -1,6 +1,6 @@
 @extends('home.home_master')
 @section('home')
-    @include('home.homelayout.blade.php.slider')
+    @include('home.homelayout.slider')
     <!-- end hero -->
     <div class="lonyo-content-shape1">
         <img src="{{ asset('frontend/assets/images/shape/shape1.svg') }}" alt="">
