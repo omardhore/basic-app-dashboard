@@ -13,7 +13,7 @@
         <div class="lonyo-mobile-menu-items">
             <nav class="lonyo-sidemenu-nav">
                 <ul>
-                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{{ route('home.about') }}">About Us</a></li>
                     <li><a href="{{ route('home.pricing') }}">Pricing</a></li>
                     <li><a href="{{ route('home.portfolio') }}">Portfolio</a></li>

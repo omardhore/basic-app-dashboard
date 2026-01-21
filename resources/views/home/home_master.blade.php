@@ -69,7 +69,7 @@
 
 
   <!-- Mobile Menu -->
-  @include('home.body.mobile_menu')
+  {{-- @include('home.body.mobile_menu') --}}
   <!-- End mobile menu -->
 
   @include('home.body.header')

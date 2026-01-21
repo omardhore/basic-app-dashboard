@@ -10,9 +10,9 @@
       </div>
       <div class="col">
         <div class="lonyo-main-menu-item">
-          <nav class="main-menu menu-style1 d-none d-lg-block menu-left">
+          <nav class="main-menu menu-style1 d-none d-lg-block">
             <ul>
-              <li><a href="{{ route('home') }}">Home</a></li>
+              <li><a href="{{ url('/') }}">Home</a></li>
               <li><a href="{{ route('home.about') }}">About Us</a></li>
               <li><a href="{{ route('home.pricing') }}">Pricing</a></li>
               <li><a href="{{ route('home.portfolio') }}">Portfolio</a></li>
