@@ -61,38 +61,26 @@
                             <div class="lonyo-footer-menu1">
                                 <ul>
                                     <li>
-                                        <a href="index.html">Home 01</a>
+                                        <a href="{{ url('/') }}">Home</a>
                                     </li>
                                     <li>
-                                        <a href="index-02.html">Home 02</a>
+                                        <a href="{{ route('home.about') }}">About us</a>
                                     </li>
                                     <li>
-                                        <a href="index-03.html">Home 03</a>
+                                        <a href="{{ route('home.contact') }}">Contact us</a>
                                     </li>
                                     <li>
-                                        <a href="about-us.html">About us</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact-us.html">Contact us</a>
+                                        <a href="{{ route('home.pricing') }}">Pricing</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="lonyo-footer-menu1">
                                 <ul>
                                     <li>
-                                        <a href="blog.html">Blog</a>
+                                        <a href="{{ route('home.blog') }}">Blog</a>
                                     </li>
                                     <li>
-                                        <a href="single-blog.html">Blog single</a>
-                                    </li>
-                                    <li>
-                                        <a href="integration.html">Integrations</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-integration.html">Integration single</a>
-                                    </li>
-                                    <li>
-                                        <a href="pricing.html">Pricing</a>
+                                        <a href="{{ route('home.portfolio') }}">Portfolio</a>
                                     </li>
                                 </ul>
                             </div>
@@ -101,22 +89,13 @@
                 </div>
                 <div class="col-xxl-2 col-xl-4 col-md-6">
                     <div class="lonyo-footer-menu pl-30">
-                        <h4>Utility pages</h4>
+                        <h4>Account</h4>
                         <ul>
                             <li>
-                                <a href="sign-up.html">Sign up</a>
+                                <a href="{{ route('register') }}">Sign up</a>
                             </li>
                             <li>
-                                <a href="login.html">Log in</a>
-                            </li>
-                            <li>
-                                <a href="reset-password.html">Reset password</a>
-                            </li>
-                            <li>
-                                <a href="cooming-soon.html">Coming soon</a>
-                            </li>
-                            <li>
-                                <a href="error-404.html">404 Not found</a>
+                                <a href="{{ route('login') }}">Log in</a>
                             </li>
                         </ul>
                     </div>
@@ -136,7 +115,7 @@
             <div class="lonyo-footer-shape"></div>
         </div>
         <div class="lonyo-footer-bottom-text">
-            <p>© Copyright <span id="current-year"></span>, All Rights Reserved by Mthemeus</p>
+            <p>© Copyright <span id="current-year"></span>, All Rights Reserved</p>
         </div>
     </div>
 </footer>
