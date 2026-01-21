@@ -6,7 +6,28 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home.index');
-});
+})->name('home');
+
+Route::get('/about', function () {
+    return view('home.pages.about');
+})->name('home.about');
+
+Route::get('/pricing', function () {
+    return view('home.pages.pricing');
+})->name('home.pricing');
+
+Route::get('/portfolio', function () {
+    return view('home.pages.portfolio');
+})->name('home.portfolio');
+
+Route::get('/blog', function () {
+    return view('home.pages.blog');
+})->name('home.blog');
+
+Route::get('/contact', function () {
+    return view('home.pages.contact');
+})->name('home.contact');
+
 
 Route::get('/dashboard', [AdminController::class, 'index'])->middleware(['auth', 'twofactor', 'verified'])->name('dashboard');
 

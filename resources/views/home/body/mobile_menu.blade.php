@@ -13,14 +13,16 @@
         <div class="lonyo-mobile-menu-items">
             <nav class="lonyo-sidemenu-nav">
                 <ul>
-                    <li><a href="{{ url('/') }}">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li class="mt-4"><a href="{{ route('login') }}" class="lonyo-default-btn w-100 text-center">Log in</a></li>
-                    <li class="mt-2"><a href="{{ route('register') }}" class="lonyo-default-btn w-100 text-center">Sign Up</a></li>
+                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><a href="{{ route('home.about') }}">About Us</a></li>
+                    <li><a href="{{ route('home.pricing') }}">Pricing</a></li>
+                    <li><a href="{{ route('home.portfolio') }}">Portfolio</a></li>
+                    <li><a href="{{ route('home.blog') }}">Blog</a></li>
+                    <li><a href="{{ route('home.contact') }}">Contact</a></li>
+                    <li class="mt-4"><a href="{{ route('login') }}" class="lonyo-default-btn w-100 text-center">Log
+                            in</a></li>
+                    <li class="mt-2"><a href="{{ route('register') }}" class="lonyo-default-btn w-100 text-center">Sign
+                            Up</a></li>
                 </ul>
             </nav>
         </div>
