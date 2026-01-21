@@ -91,12 +91,26 @@
                     <div class="lonyo-footer-menu pl-30">
                         <h4>Account</h4>
                         <ul>
-                            <li>
-                                <a href="{{ route('register') }}">Sign up</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('login') }}">Log in</a>
-                            </li>
+                            @auth
+                                <li>
+                                    <a href="{{ route('dashboard') }}">Dashboard</a>
+                                </li>
+                                <li>
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+                                    </form>
+                                </li>
+                            @endauth
+                            @guest
+                                <li>
+                                    <a href="{{ route('register') }}">Sign up</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('login') }}">Log in</a>
+                                </li>
+                            @endguest
                         </ul>
                     </div>
                 </div>

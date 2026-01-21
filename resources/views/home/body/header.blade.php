@@ -24,12 +24,29 @@
       </div>
       <div class="col-auto d-flex align-items-center">
         <div class="lonyo-header-info-wraper2">
-          <div class="lonyo-header-info-content">
-            <ul>
-              <li><a href="{{ route('login') }}">Log in</a></li>
-            </ul>
-          </div>
-          <a class="lonyo-default-btn lonyo-header-btn" href="{{ route('register') }}">Free Account</a>
+          @auth
+            <a class="lonyo-default-btn lonyo-header-btn" href="{{ route('dashboard') }}">Dashboard</a>
+            <div class="lonyo-header-info-content ml-2">
+              <ul>
+                <li>
+                  <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="{{ route('logout') }}"
+                      onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          @endauth
+
+          @guest
+            <div class="lonyo-header-info-content">
+              <ul>
+                <li><a href="{{ route('login') }}">Log in</a></li>
+              </ul>
+            </div>
+            <a class="lonyo-default-btn lonyo-header-btn" href="{{ route('register') }}">Free Account</a>
+          @endguest
         </div>
         <div class="lonyo-header-menu">
           <nav class="navbar site-navbar justify-content-between">

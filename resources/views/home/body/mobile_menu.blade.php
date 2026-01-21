@@ -19,10 +19,25 @@
                     <li><a href="{{ route('home.portfolio') }}">Portfolio</a></li>
                     <li><a href="{{ route('home.blog') }}">Blog</a></li>
                     <li><a href="{{ route('home.contact') }}">Contact</a></li>
-                    <li class="mt-4"><a href="{{ route('login') }}" class="lonyo-default-btn w-100 text-center">Log
-                            in</a></li>
-                    <li class="mt-2"><a href="{{ route('register') }}" class="lonyo-default-btn w-100 text-center">Sign
-                            Up</a></li>
+                    @auth
+                        <li class="mt-4"><a href="{{ route('dashboard') }}"
+                                class="lonyo-default-btn w-100 text-center">Dashboard</a></li>
+                        <li class="mt-2">
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); this.closest('form').submit();"
+                                    class="lonyo-default-btn w-100 text-center">Logout</a>
+                            </form>
+                        </li>
+                    @endauth
+
+                    @guest
+                        <li class="mt-4"><a href="{{ route('login') }}" class="lonyo-default-btn w-100 text-center">Log
+                                in</a></li>
+                        <li class="mt-2"><a href="{{ route('register') }}" class="lonyo-default-btn w-100 text-center">Sign
+                                Up</a></li>
+                    @endguest
                 </ul>
             </nav>
         </div>
