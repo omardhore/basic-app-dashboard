@@ -35,41 +35,37 @@
                 </li>
 
 
-                <li class="menu-title">Pages</li>
+
 
                 <li>
                     <a href="#sidebarAuth" data-bs-toggle="collapse">
                         <i data-feather="users"></i>
-                        <span> Authentication </span>
+                        <span> Review Setup </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="sidebarAuth">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="auth-login.html" class="tp-link">Log In</a>
+                                <a href="{{ route('all.review') }}" class="tp-link">All Reviews</a>
                             </li>
-                            <li>
-                                <a href="auth-register.html" class="tp-link">Register</a>
-                            </li>
+
 
                         </ul>
                     </div>
                 </li>
 
                 <li>
-                    <a href="#sidebarError" data-bs-toggle="collapse">
-                        <i data-feather="alert-octagon"></i>
-                        <span> Error Pages </span>
+                    <a href="#sidebarSlider" data-bs-toggle="collapse">
+                        <i data-feather="sliders"></i>
+                        <span> Slider Setup </span>
                         <span class="menu-arrow"></span>
                     </a>
-                    <div class="collapse" id="sidebarError">
+                    <div class="collapse" id="sidebarSlider">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="error-404.html" class="tp-link">Error 404</a>
+                                <a href="{{ route('home.slider') }}" class="tp-link">Home Slider</a>
                             </li>
-                            <li>
-                                <a href="error-500.html" class="tp-link">Error 500</a>
-                            </li>
+
 
                         </ul>
                     </div>

@@ -19,8 +19,17 @@
     <!-- Icons -->
     <link href="{{asset('backend/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 
+    <!-- Custom Admin CSS -->
+    <link href="{{asset('backend/assets/css/custom_admin.css')}}" rel="stylesheet" type="text/css" />
+
     <!-- Toastr css -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+    <!-- DataTables css -->
+    <link href="{{ asset('backend/assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}"
+        rel="stylesheet" type="text/css" />
+    <link href="{{ asset('backend/assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css') }}"
+        rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -82,6 +91,17 @@
     <script src="{{asset('backend/assets/js/app.js')}}"></script>
     <!-- Theme js-->
     <script src="{{asset('backend/assets/js/theme.js')}}"></script>
+
+    <!-- Datatables js -->
+    <script src="{{ asset('backend/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js') }}"></script>
+    <script
+        src="{{ asset('backend/assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/js/pages/datatables.init.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="{{ asset('backend/assets/js/code.js') }}"></script>
 
     <!-- Toastr js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
